@@ -21,6 +21,8 @@ function useAmazonScraper(productName, setError) {
           `https://cors-anywhere.herokuapp.com/https://www.amazon.in/s?k=${encodedProductName}`
         );
 
+        
+
         // Extract information from the response
         const $ = cheerio.load(response.data);
         const items = $(".s-result-item");
